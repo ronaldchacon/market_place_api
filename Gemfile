@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'active_model_serializers', git: 'https://github.com/rails-api/active_model_serializers.git', branch: 'master'
+gem 'devise', '~> 3.5', '>= 3.5.6'
 
 group :development, :test do
   gem 'byebug'
