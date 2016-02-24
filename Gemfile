@@ -12,6 +12,9 @@ gem 'active_model_serializers', git: 'https://github.com/rails-api/active_model_
 
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+  gem 'factory_girl_rails', '~> 4.6'
+  gem 'faker', '~> 1.6', '>= 1.6.3'
 end
 
 group :development do
