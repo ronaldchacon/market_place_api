@@ -9,6 +9,11 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       user_response = json_response
       expect(user_response[:email]).to eq @user.email
     end
+
+    it 'has the product ids as an embeded object' do
+      user_response = json_response
+      expect(user_response[:products]).to eq([])
+    end
   end
 
   describe 'POST #create' do
