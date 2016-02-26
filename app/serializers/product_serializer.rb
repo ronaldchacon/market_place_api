@@ -1,3 +1,4 @@
 class ProductSerializer < ActiveModel::Serializer
-  attributes *Product.column_names
+  attributes :title, :price, :published
+  belongs_to :user
 end
