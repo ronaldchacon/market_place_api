@@ -9,7 +9,7 @@ module Api
       end
 
       def index
-        respond_with Product.all
+        respond_with Product.search(params)
       end
 
       def create
