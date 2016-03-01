@@ -13,9 +13,13 @@ module Api
       end
 
       def create
-        order = current_user.orders.new(order_params)
+        order = current_user.orders.new
+        order.build_placements_with_ids_and_quantities(
+          params[:order][:product_ids_and_quantities]
+        )
 
         if order.save
+          order.reload
           OrderMailer.send_confirmation(order).deliver
           render json: order, status: 201, location: [:api, current_user, order]
         else
